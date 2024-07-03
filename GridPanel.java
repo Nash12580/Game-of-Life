@@ -16,10 +16,9 @@ public class GridPanel extends JPanel {
         this.rows = rows;
         this.columns = columns;
         grid = new boolean[rows][columns];
+        //size = 20;
         setBackground(new Color(78, 114, 142));
         setPreferredSize(new Dimension(columns * size, rows * size));
-
-        addMouseListener(new MouseNanny(this));
 
     }
 
