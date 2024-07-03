@@ -2,30 +2,49 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class Nanny implements ActionListener {
-    Grid grid = new Grid();
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-    public void Nanny (Grid g) {
-        grid = g;
+public class Nanny implements ActionListener {
+    private GridPanel gridPanel;
+
+    public Nanny(GridPanel gridPanel) {
+        this.gridPanel = gridPanel;
     }
 
+    @Override
     public void actionPerformed(ActionEvent e) {
-        if (e.getActionCommand().equals("Clear")){
-            grid.reset();
-            grid.repaint();
-        } else if (e.getActionCommand().equals("Start")){
-            grid.setStart(1);
-        } else if (e.getActionCommand().equals("Stop")) {
-            grid.setStart(0);
-        } else if (e.getActionCommand().equals("Next")) {
-            Genius.calculateNextGeneration(grid.get());
-            grid.repaint();
-        } else if (e.getActionCommand().equals("Lexicon")){
+        String command = e.getActionCommand();
 
-        } else if (e.getActionCommand().equals("Explanation")){
-
-        } else if (e.getSource() instanceof Cell){
-            grid.toggleCell();
+        switch (command) {
+            case "Clear":
+                gridPanel.erase();
+                gridPanel.repaint();
+                break;
+            case "Start":
+                // Start logic (could involve starting a timer for continuous generation updates)
+                break;
+            case "Stop":
+                // Stop logic (could involve stopping a timer for continuous generation updates)
+                break;
+            case "Next":
+                gridPanel.calculateNextGeneration();
+                gridPanel.repaint();
+                break;
+            case "Lexicon":
+                // Lexicon logic
+                break;
+            case "Explanation":
+                // Explanation logic
+                break;
+            default:
+                if (e.getSource() instanceof Cell) {
+                    Cell cell = (Cell) e.getSource();
+                    gridPanel.toggleCell(cell.getRow(), cell.getColumn());
+                    gridPanel.repaint();
+                }
+                break;
         }
     }
 }
+
