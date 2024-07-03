@@ -10,14 +10,17 @@ public class MainGame extends JFrame{
     }
 
     public MainGame(){
+
         JLabel name  = new JLabel("Conway's Game of Life");
-        BorderLayout b = new BorderLayout();
-        setLayout(b);
-        GridPanel grid = new GridPanel(20, 10);
-        //ControlPanel controls = new ControlPanel();
+        name.setFont(new Font("Arial", Font.BOLD, 36));
+        setLayout(new BorderLayout());
+        GridPanel grid = new GridPanel(24, 35);
+        ControlPanel controls = new ControlPanel();
         add(name, BorderLayout.NORTH);
         add(grid, BorderLayout.CENTER);
-        //add(grid, BorderLayout.SOUTH);1
+        add(grid, BorderLayout.SOUTH);
+
+        grid.randomizeGrid();
     }
 
 }
