@@ -5,7 +5,7 @@ import javax.swing.*;
 import java.awt.*;
 
 public class Genius {
-    private GridPanel gridPanel;
+    private static GridPanel gridPanel;
 
     public Genius(GridPanel gridPanel) {
         this.gridPanel = gridPanel;

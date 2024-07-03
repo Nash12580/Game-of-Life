@@ -6,7 +6,11 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class Nanny implements ActionListener {
+
+    GridPanel grid = new GridPanel();
+
     private GridPanel gridPanel;
+
 
     public Nanny(GridPanel gridPanel) {
         this.gridPanel = gridPanel;
