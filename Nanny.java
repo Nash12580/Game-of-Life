@@ -3,7 +3,7 @@ import java.awt.*;
 import java.awt.event.*;
 
 public class Nanny implements ActionListener {
-    Grid grid = new Grid();
+    GridPanel grid = new GridPanel();
 
     public void Nanny (Grid g) {
         grid = g;

@@ -1,4 +1,3 @@
-import javax.management.RuntimeMBeanException;
 import javax.swing.*;
 import java.awt.*;
 import java.util.Random;
@@ -14,7 +13,7 @@ public class GridPanel extends JPanel{
         grid = new boolean[rows][columns];
         setBackground(new Color(78,114,142));
         setPreferredSize(new Dimension(columns * size, rows * size));
-
+        addMouseListener(new MouseNanny(this));
     }
 
     @Override
@@ -64,6 +63,11 @@ public class GridPanel extends JPanel{
     public boolean[][] getGrid(){
         return grid;
     }
+
+    public int getCellSize(){
+        return size;
+    }
+
 
     public void toggleCell(int row, int col) {
         if(row >= 0 && col >= 0 && row < rows && col < columns){

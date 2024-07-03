@@ -21,6 +21,7 @@ public class MainGame extends JFrame{
         add(grid, BorderLayout.SOUTH);
 
         grid.randomizeGrid();
+        grid.addMouseListener(new MouseNanny(grid));
     }
 
 }
