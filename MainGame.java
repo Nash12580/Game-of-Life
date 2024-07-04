@@ -1,6 +1,9 @@
 import javax.swing.*;
 import java.awt.*;
 
+/*@author Grant Robinson
+* @author Nashali Vicente
+* @author Veer Bhagia*/
 public class MainGame extends JFrame{
     public static void main(String[] args) {
         MainGame app = new MainGame();

@@ -5,7 +5,8 @@ import java.util.Random;
 import javax.swing.*;
 import java.awt.*;
 import java.util.Random;
-
+/*@author Nashali Vicente
+* @author Veer Bhagia*/
 public class GridPanel extends JPanel {
     private boolean[][] grid;
     private final int rows;

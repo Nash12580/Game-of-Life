@@ -1,7 +1,7 @@
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
-
+/*@author Nashali Vicente*/
 public class MouseNanny implements MouseListener {
     private final GridPanel gridPanel;
     private int row;

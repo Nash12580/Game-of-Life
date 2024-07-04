@@ -1,7 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
 
-
+/*@author Grant Robinson*/
 public class ControlPanel extends JPanel {
     public ControlPanel(GridPanel grid) {
         setBackground(Color.BLUE);

@@ -4,6 +4,7 @@ import java.awt.*;
 import javax.swing.*;
 import java.awt.*;
 
+/*@author Veer Bhagia*/
 public class Genius {
     private static GridPanel gridPanel;
 
